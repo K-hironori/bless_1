@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海SUP in西尾市 | 10/13開催 - サップヨガ＆クルージング体験</title>
+    <meta name="description" content="2025年10月13日(月・祝)西尾市で海SUP体験イベント開催。サップヨガ60分+サップクルージング30分。インストラクターchika指導のもと、初心者も安心して楽しめます。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(to bottom, #f0f8f5 0%, #ffffff 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ヘッダー */
+        header {
+            background: linear-gradient(135deg, #0f4c3a 0%, #1a7a5e 50%, #0f4c3a 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,50 Q300,100 600,50 T1200,50 L1200,0 L0,0 Z" fill="rgba(255,255,255,0.1)"/></svg>') repeat-x;
+            opacity: 0.3;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
+        }
+
+        .event-date {
+            font-size: 4em;
+            font-weight: bold;
+            margin: 30px 0;
+            color: #ffffff;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            letter-spacing: 8px;
+        }
+
+        .event-day {
+            font-size: 1.8em;
+            margin-top: -20px;
+            color: #fff;
+        }
+
+        /* メインビジュアル */
+        .hero-section {
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .hero-image {
+            max-width: 500px;
+            margin: 0 auto 30px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        /* 時間セクション */
+        .schedule-section {
+            padding: 60px 20px;
+            background: white;
+            margin: 40px 0;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .schedule-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .time-slot {
+            background: linear-gradient(135deg, #0f4c3a 0%, #1a7a5e 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 6px 15px rgba(15,76,58,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .time-slot:hover {
+            transform: translateY(-5px);
+        }
+
+        .time-slot h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .time-slot p {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        .sold-out {
+            position: relative;
+        }
+
+        .sold-out::after {
+            content: 'SOLD OUT';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-15deg);
+            background: #ff3333;
+            color: white;
+            padding: 15px 40px;
+            font-size: 2em;
+            font-weight: bold;
+            border: 4px solid white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .thank-you {
+            background: #ff5252;
+            color: white;
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        /* プログラム内容 */
+        .program-section {
+            background: linear-gradient(135deg, #0f4c3a 0%, #1a7a5e 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .program-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .program-content {
+            font-size: 1.5em;
+            line-height: 2;
+        }
+
+        .program-note {
+            font-size: 1em;
+            margin-top: 15px;
+            opacity: 0.9;
+        }
+
+        /* 詳細情報 */
+        .info-section {
+            background: white;
+            padding: 60px 20px;
+            margin: 40px 0;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .info-box {
+            display: grid;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            padding: 25px;
+            background: #f8faf9;
+            border-radius: 12px;
+            border-left: 5px solid #1a7a5e;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .info-icon {
+            font-size: 2.5em;
+            margin-right: 20px;
+            color: #1a7a5e;
+        }
+
+        .info-content h3 {
+            font-size: 1.3em;
+            color: #1a7a5e;
+            margin-bottom: 8px;
+        }
+
+        .info-content p {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .member-price {
+            background: #e8f5f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 1.2em;
+            border: 1px solid #1a7a5e;
+        }
+
+        /* レンタル情報 */
+        .rental-section {
+            background: linear-gradient(135deg, #0f4c3a 0%, #1a7a5e 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .rental-section h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .rental-items {
+            font-size: 1.3em;
+            line-height: 2;
+        }
+
+        /* インストラクター情報 */
+        .instructor-section {
+            background: white;
+            padding: 60px 20px;
+            margin: 40px 0;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .instructor-section h2 {
+            font-size: 2.5em;
+            color: #1a7a5e;
+            margin-bottom: 30px;
+        }
+
+        .instructor-name {
+            font-size: 2em;
+            color: #1a7a5e;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .organizer {
+            font-size: 1.8em;
+            color: #333;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        /* 予約・お問い合わせ */
+        .contact-section {
+            background: linear-gradient(135deg, #0f4c3a 0%, #1a7a5e 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 20px;
+            margin: 40px 0;
+            box-shadow: 0 6px 20px rgba(15,76,58,0.4);
+        }
+
+        .contact-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            font-size: 1.8em;
+            margin: 20px 0;
+        }
+
+        .instagram-handle {
+            background: white;
+            color: #1a7a5e;
+            display: inline-block;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin: 20px 0;
+            font-size: 1.8em;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .social-note {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        /* フッター */
+        footer {
+            background: #0f4c3a;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .event-date {
+                font-size: 2.5em;
+                letter-spacing: 4px;
+            }
+
+            .event-day {
+                font-size: 1.3em;
+            }
+
+            .schedule-box {
+                grid-template-columns: 1fr;
+            }
+
+            .info-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .info-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .sold-out::after {
+                font-size: 1.5em;
+                padding: 10px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>海SUP in西尾市</h1>
+            <div class="event-date">10/13</div>
+            <div class="event-day">(月・祝)</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero-section">
+            <p style="font-size: 1.5em; color: #1a7a5e; margin-bottom: 30px;">
+                愛知県西尾市の美しい海で<br>
+                SUPヨガとクルージングを体験しませんか？
+            </p>
+        </section>
+
+        <section class="schedule-section">
+            <h2 style="text-align: center; font-size: 2.5em; color: #1a7a5e; margin-bottom: 40px;">開催時間</h2>
+            <div class="schedule-box">
+                <div class="time-slot">
+                    <h3>【1部】</h3>
+                    <p>8:00〜9:30</p>
+                </div>
+                <div class="time-slot sold-out">
+                    <h3>【2部】</h3>
+                    <p>※満員御礼</p>
+                    <div class="thank-you">THANK YOU!</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="program-section">
+            <h2>プログラム内容</h2>
+            <div class="program-content">
+                サップヨガ 60分<br>
+                ＋<br>
+                サップクルージング 30分
+            </div>
+            <div class="program-note">※内容は変更となることがございます</div>
+        </section>
+
+        <section class="info-section">
+            <h2 style="text-align: center; font-size: 2.5em; color: #1a7a5e; margin-bottom: 40px;">イベント詳細</h2>
+            <div class="info-box">
+                <div class="info-item">
+                    <div class="info-icon">👥</div>
+                    <div class="info-content">
+                        <h3>定員</h3>
+                        <p>各8名様限定</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">¥</div>
+                    <div class="info-content">
+                        <h3>料金</h3>
+                        <p>90分 6,600円</p>
+                        <div class="member-price">
+                            <strong>BLESS会員様特別価格</strong><br>
+                            大人 5,500円 / 子供 3,500円
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="rental-section">
+            <h3>レンタル料金・保険料込み</h3>
+            <div class="rental-items">
+                SUPボード・パドル・ライフジャケット<br>
+                レンタル料込み / 保険料込み
+            </div>
+        </section>
+
+        <section class="instructor-section">
+            <h2>インストラクター</h2>
+            <div class="instructor-name">chika</div>
+            <p style="font-size: 1.3em; color: #666; margin: 20px 0;">
+                経験豊富なインストラクターが<br>
+                初心者の方にも丁寧に指導いたします
+            </p>
+            <div class="organizer">
+                主催者: 株式会社BLESS
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>ご予約・お問い合わせ</h2>
+            <div class="contact-info">
+                InstagramのDMへお気軽にどうぞ
+            </div>
+            <div class="instagram-handle">
+                @akirabless
+            </div>
+            <div class="social-note">
+                または @AKIRABLESS までご連絡ください
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 株式会社BLESS. All rights reserved.</p>
+    </footer>
+</body>
+</html>
