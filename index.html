@@ -150,6 +150,14 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.15);
             margin-top: 40px;
         }
+        .intro-video {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            margin-top: 40px;
+            display: none;
+        }
 
         /* --- Schedule Section --- */
         .schedule-box {
@@ -402,7 +410,12 @@
             }
 
             .intro-image {
-                border-radius: 10px;
+                display: none;
+            }
+
+            .intro-video {
+                display: block;
+                border-radius: 15px;
             }
 
             .schedule-box {
@@ -606,6 +619,9 @@
                     心と体を解き放つ、特別な一日を過ごしませんか？
                 </p>
                 <img src="https://images.unsplash.com/photo-1588482583842-13426532788f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="SUPヨガの様子" class="intro-image">
+                <video autoplay loop muted playsinline class="intro-video">
+                    <source src="images/sup_video.mp4" type="video/mp4">
+                </video>
             </div>
         </section>
 
