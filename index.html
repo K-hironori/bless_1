@@ -5,384 +5,382 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>海SUP in西尾市 | 10/13開催 - サップヨガ＆クルージング体験</title>
     <meta name="description" content="2025年10月13日(月・祝)西尾市で海SUP体験イベント開催。サップヨガ60分+サップクルージング30分。インストラクターchika指導のもと、初心者も安心して楽しめます。">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
     <style>
+        :root {
+            --primary-color: #1a7a5e;
+            --dark-color: #0f4c3a;
+            --light-bg: #f7fbf9;
+            --text-color: #333;
+            --white-color: #ffffff;
+            --accent-color: #ff5252;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
             line-height: 1.8;
-            color: #333;
-            background: linear-gradient(to bottom, #f0f8f5 0%, #ffffff 100%);
+            color: var(--text-color);
+            background-color: var(--white-color);
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* ヘッダー */
-        header {
-            background: linear-gradient(135deg, #0f4c3a 0%, #1a7a5e 50%, #0f4c3a 100%);
-            color: white;
-            text-align: center;
-            padding: 60px 20px 40px;
-            position: relative;
-            overflow: hidden;
+        h1, h2, h3 {
+             font-family: 'Zen Kaku Gothic Antique', sans-serif;
+             font-weight: 700;
+             letter-spacing: 1.5px;
         }
 
-        header::before {
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8em;
+            color: var(--dark-color);
+            margin-bottom: 60px;
+            position: relative;
+        }
+        .section-title::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,50 Q300,100 600,50 T1200,50 L1200,0 L0,0 Z" fill="rgba(255,255,255,0.1)"/></svg>') repeat-x;
-            opacity: 0.3;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
         }
 
-        .header-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        h1 {
-            font-size: 3.5em;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            letter-spacing: 2px;
-        }
-
-        .event-date {
-            font-size: 4em;
-            font-weight: bold;
-            margin: 30px 0;
-            color: #ffffff;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
-            letter-spacing: 8px;
-        }
-
-        .event-day {
-            font-size: 1.8em;
-            margin-top: -20px;
-            color: #fff;
-        }
-
-        /* メインビジュアル */
-        .hero-section {
-            background: white;
-            padding: 60px 20px;
+        /* --- Header & Hero --- */
+        header {
+            height: 100vh;
+            color: var(--white-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .hero-image {
-            max-width: 500px;
-            margin: 0 auto 30px;
-            border-radius: 20px;
+            position: relative;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
 
-        /* 時間セクション */
-        .schedule-section {
-            padding: 60px 20px;
-            background: white;
-            margin: 40px 0;
-            border-radius: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-
-        .schedule-box {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        .time-slot {
-            background: linear-gradient(135deg, #0f4c3a 0%, #1a7a5e 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            position: relative;
-            box-shadow: 0 6px 15px rgba(15,76,58,0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .time-slot:hover {
-            transform: translateY(-5px);
-        }
-
-        .time-slot h3 {
-            font-size: 2em;
-            margin-bottom: 15px;
-            color: #ffffff;
-        }
-
-        .time-slot p {
-            font-size: 1.8em;
-            font-weight: bold;
-        }
-
-        .sold-out {
-            position: relative;
-        }
-
-        .sold-out::after {
-            content: 'SOLD OUT';
+        #hero-video {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) rotate(-15deg);
-            background: #ff3333;
-            color: white;
-            padding: 15px 40px;
-            font-size: 2em;
-            font-weight: bold;
-            border: 4px solid white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -2;
+            transform: translateX(-50%) translateY(-50%);
         }
 
-        .thank-you {
-            background: #ff5252;
-            color: white;
-            display: inline-block;
-            padding: 10px 25px;
-            border-radius: 30px;
-            font-weight: bold;
-            margin-top: 10px;
-            font-size: 1.2em;
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
         }
 
-        /* プログラム内容 */
-        .program-section {
-            background: linear-gradient(135deg, #0f4c3a 0%, #1a7a5e 100%);
-            color: white;
+        .header-content {
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        }
+
+        h1 {
+            font-size: clamp(2.5em, 8vw, 4.5em);
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .event-date {
+            font-size: clamp(4em, 15vw, 9em);
+            font-weight: 700;
+            line-height: 1;
+            margin: 20px 0 10px;
+            text-shadow: 0 6px 15px rgba(0,0,0,0.6);
+        }
+        .event-day {
+            font-size: clamp(1.5em, 4vw, 2em);
+            letter-spacing: 4px;
+        }
+
+        @keyframes text-focus-in {
+            0% { filter: blur(12px); opacity: 0; }
+            100% { filter: blur(0px); opacity: 1; }
+        }
+
+        /* --- Intro Section --- */
+        .intro-section {
+            text-align: center;
+            background: var(--light-bg);
+        }
+        .intro-text {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-weight: 700;
+        }
+        .intro-image {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            margin-top: 40px;
+        }
+
+        /* --- Schedule Section --- */
+        .schedule-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .time-slot {
+            background: var(--white-color);
+            color: var(--text-color);
             padding: 40px;
             border-radius: 15px;
-            margin: 40px 0;
             text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
         }
-
-        .program-section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+        .time-slot:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
         }
-
-        .program-content {
+        .time-slot h3 {
             font-size: 1.5em;
-            line-height: 2;
+            color: var(--primary-color);
+            margin-bottom: 10px;
         }
-
-        .program-note {
-            font-size: 1em;
-            margin-top: 15px;
+        .time-slot p {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+        .sold-out {
+            background: #f0f0f0;
+            color: #aaa;
+        }
+        .sold-out::after {
+            content: 'SOLD OUT';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%) rotate(-15deg);
+            background: var(--accent-color);
+            color: var(--white-color);
+            padding: 10px 30px;
+            font-size: 1.8em;
+            font-weight: bold;
+            border-radius: 8px;
             opacity: 0.9;
         }
-
-        /* 詳細情報 */
-        .info-section {
-            background: white;
-            padding: 60px 20px;
-            margin: 40px 0;
-            border-radius: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        .thank-you {
+            color: #aaa;
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 1em;
         }
 
+        /* --- Program Section --- */
+        .program-section {
+            background: var(--dark-color);
+            color: var(--white-color);
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        .program-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        .program-content {
+            font-size: 2em;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+        .program-content span {
+            font-size: 1.5em;
+            color: #9fcec1;
+        }
+        .program-note {
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+
+        /* --- Info Section --- */
+        .info-section {
+             background: var(--light-bg);
+        }
         .info-box {
             display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            max-width: 800px;
-            margin: 0 auto;
         }
-
         .info-item {
+            background: var(--white-color);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             display: flex;
+            flex-direction: column;
             align-items: center;
-            padding: 25px;
-            background: #f8faf9;
-            border-radius: 12px;
-            border-left: 5px solid #1a7a5e;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
         }
-
-        .info-item:hover {
-            transform: translateX(10px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
         .info-icon {
-            font-size: 2.5em;
-            margin-right: 20px;
-            color: #1a7a5e;
+            font-size: 3.5em;
+            color: var(--primary-color);
+            margin-bottom: 20px;
         }
-
         .info-content h3 {
-            font-size: 1.3em;
-            color: #1a7a5e;
+            font-size: 1.2em;
+            color: var(--primary-color);
             margin-bottom: 8px;
         }
-
         .info-content p {
-            font-size: 1.5em;
+            font-size: 1.8em;
             font-weight: bold;
-            color: #333;
         }
-
         .member-price {
             background: #e8f5f0;
             padding: 15px;
             border-radius: 8px;
-            margin-top: 10px;
-            font-size: 1.2em;
-            border: 1px solid #1a7a5e;
+            margin-top: 15px;
+            font-size: 1.1em;
+            border: 1px dashed var(--primary-color);
+            width: 100%;
         }
 
-        /* レンタル情報 */
-        .rental-section {
-            background: linear-gradient(135deg, #0f4c3a 0%, #1a7a5e 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 12px;
-            margin: 40px 0;
-            text-align: center;
+        /* --- Instructor Section --- */
+        .instructor-flex {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            max-width: 900px;
+            margin: 0 auto;
         }
-
-        .rental-section h3 {
-            font-size: 1.8em;
-            margin-bottom: 15px;
+        .instructor-img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
-
-        .rental-items {
-            font-size: 1.3em;
-            line-height: 2;
+        .instructor-bio {
+            text-align: left;
         }
-
-        /* インストラクター情報 */
-        .instructor-section {
-            background: white;
-            padding: 60px 20px;
-            margin: 40px 0;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-
-        .instructor-section h2 {
-            font-size: 2.5em;
-            color: #1a7a5e;
-            margin-bottom: 30px;
-        }
-
         .instructor-name {
-            font-size: 2em;
-            color: #1a7a5e;
-            font-weight: bold;
-            margin: 20px 0;
-        }
-
-        .organizer {
-            font-size: 1.8em;
-            color: #333;
-            margin-top: 30px;
-            padding-top: 30px;
-            border-top: 2px solid #e0e0e0;
-        }
-
-        /* 予約・お問い合わせ */
-        .contact-section {
-            background: linear-gradient(135deg, #0f4c3a 0%, #1a7a5e 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            border-radius: 20px;
-            margin: 40px 0;
-            box-shadow: 0 6px 20px rgba(15,76,58,0.4);
-        }
-
-        .contact-section h2 {
             font-size: 2.5em;
-            margin-bottom: 30px;
+            color: var(--dark-color);
+            margin-bottom: 10px;
         }
-
-        .contact-info {
-            font-size: 1.8em;
-            margin: 20px 0;
+        .instructor-bio p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 20px;
         }
-
-        .instagram-handle {
-            background: white;
-            color: #1a7a5e;
-            display: inline-block;
-            padding: 15px 40px;
-            border-radius: 50px;
+        .organizer {
+            font-size: 1.3em;
             font-weight: bold;
-            margin: 20px 0;
-            font-size: 1.8em;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-        .social-note {
-            font-size: 1.2em;
+            color: var(--primary-color);
+            border-top: 2px solid #e0e0e0;
+            padding-top: 15px;
             margin-top: 20px;
         }
 
-        /* フッター */
-        footer {
-            background: #0f4c3a;
-            color: white;
+        /* --- Contact Section --- */
+        .contact-section {
+            background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+            color: var(--white-color);
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 60px;
+            border-radius: 20px;
+        }
+        .contact-section h2 {
+            color: var(--white-color);
+        }
+        .contact-info {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+        }
+        .instagram-btn {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            color: var(--white-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .instagram-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+        }
+        .instagram-btn i {
+            font-size: 1.5em;
         }
 
-        /* レスポンシブ */
+        /* --- Footer --- */
+        footer {
+            background: var(--dark-color);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        /* --- Animation --- */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Responsive --- */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2em;
-            }
-
-            .event-date {
-                font-size: 2.5em;
-                letter-spacing: 4px;
-            }
-
-            .event-day {
-                font-size: 1.3em;
-            }
-
-            .schedule-box {
-                grid-template-columns: 1fr;
-            }
-
-            .info-item {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .info-icon {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-
-            .sold-out::after {
-                font-size: 1.5em;
-                padding: 10px 25px;
-            }
+            .section-title { font-size: 2.2em; }
+            .instructor-flex { flex-direction: column; text-align: center; }
+            .instructor-bio { text-align: center; }
         }
     </style>
 </head>
 <body>
     <header>
+        <video autoplay loop muted playsinline id="hero-video" poster="https://images.unsplash.com/photo-1507525428034-b723a9ce6ad9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            </video>
+
         <div class="header-content">
             <h1>海SUP in西尾市</h1>
             <div class="event-date">10/13</div>
@@ -390,22 +388,25 @@
         </div>
     </header>
 
-    <main class="container">
-        <section class="hero-section">
-            <p style="font-size: 1.5em; color: #1a7a5e; margin-bottom: 30px;">
-                愛知県西尾市の美しい海で<br>
-                SUPヨガとクルージングを体験しませんか？
-            </p>
+    <main>
+        <section class="intro-section container">
+            <div class="fade-in">
+                <p class="intro-text">
+                    愛知県西尾市の美しい海の上で、<br>
+                    心と体を解き放つ、特別な一日を過ごしませんか？
+                </p>
+                <img src="https://images.unsplash.com/photo-1588482583842-13426532788f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="SUPヨガの様子" class="intro-image">
+            </div>
         </section>
 
-        <section class="schedule-section">
-            <h2 style="text-align: center; font-size: 2.5em; color: #1a7a5e; margin-bottom: 40px;">開催時間</h2>
+        <section class="schedule-section container">
+            <h2 class="section-title fade-in">TIME SCHEDULE</h2>
             <div class="schedule-box">
-                <div class="time-slot">
+                <div class="time-slot fade-in">
                     <h3>【1部】</h3>
                     <p>8:00〜9:30</p>
                 </div>
-                <div class="time-slot sold-out">
+                <div class="time-slot sold-out fade-in">
                     <h3>【2部】</h3>
                     <p>※満員御礼</p>
                     <div class="thank-you">THANK YOU!</div>
@@ -413,71 +414,79 @@
             </div>
         </section>
 
-        <section class="program-section">
-            <h2>プログラム内容</h2>
-            <div class="program-content">
-                サップヨガ 60分<br>
-                ＋<br>
-                サップクルージング 30分
+        <section class="program-section fade-in">
+            <div class="container">
+                <h2>PROGRAM</h2>
+                <div class="program-content">
+                    サップヨガ 60分<br>
+                    <span>＋</span><br>
+                    サップクルージング 30分
+                </div>
+                <div class="program-note">※内容は変更となることがございます。初心者の方も大歓迎です！</div>
             </div>
-            <div class="program-note">※内容は変更となることがございます</div>
         </section>
 
         <section class="info-section">
-            <h2 style="text-align: center; font-size: 2.5em; color: #1a7a5e; margin-bottom: 40px;">イベント詳細</h2>
-            <div class="info-box">
-                <div class="info-item">
-                    <div class="info-icon">👥</div>
-                    <div class="info-content">
-                        <h3>定員</h3>
-                        <p>各8名様限定</p>
+            <div class="container">
+                <h2 class="section-title fade-in">DETAILS</h2>
+                <div class="info-box">
+                    <div class="info-item fade-in">
+                        <i class="info-icon ph-bold ph-users"></i>
+                        <div class="info-content">
+                            <h3>定員</h3>
+                            <p>各8名様限定</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="info-item">
-                    <div class="info-icon">¥</div>
-                    <div class="info-content">
-                        <h3>料金</h3>
-                        <p>90分 6,600円</p>
-                        <div class="member-price">
-                            <strong>BLESS会員様特別価格</strong><br>
-                            大人 5,500円 / 子供 3,500円
+                    <div class="info-item fade-in">
+                        <i class="info-icon ph-bold ph-wallet"></i>
+                        <div class="info-content">
+                            <h3>料金</h3>
+                            <p>90分 6,600円</p>
+                            <div class="member-price">
+                                <strong>BLESS会員様特別価格</strong><br>
+                                大人 5,500円 / 子供 3,500円
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-item fade-in">
+                        <i class="info-icon ph-bold ph-anchor-simple"></i>
+                        <div class="info-content">
+                            <h3>料金に含まれるもの</h3>
+                            <p>SUP一式レンタル・保険料</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="rental-section">
-            <h3>レンタル料金・保険料込み</h3>
-            <div class="rental-items">
-                SUPボード・パドル・ライフジャケット<br>
-                レンタル料込み / 保険料込み
+        <section class="instructor-section container">
+            <h2 class="section-title fade-in">INSTRUCTOR</h2>
+            <div class="instructor-flex fade-in">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="インストラクター chika" class="instructor-img">
+                <div class="instructor-bio">
+                    <div class="instructor-name">chika</div>
+                    <p>
+                        経験豊富なインストラクターが、初めての方でも安心して楽しめるように、基礎から丁寧にサポートします。西尾の海の魅力を一緒に満喫しましょう！
+                    </p>
+                    <div class="organizer">
+                        主催: 株式会社BLESS
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="instructor-section">
-            <h2>インストラクター</h2>
-            <div class="instructor-name">chika</div>
-            <p style="font-size: 1.3em; color: #666; margin: 20px 0;">
-                経験豊富なインストラクターが<br>
-                初心者の方にも丁寧に指導いたします
-            </p>
-            <div class="organizer">
-                主催者: 株式会社BLESS
-            </div>
-        </section>
-
-        <section class="contact-section">
-            <h2>ご予約・お問い合わせ</h2>
-            <div class="contact-info">
-                InstagramのDMへお気軽にどうぞ
-            </div>
-            <div class="instagram-handle">
-                @akirabless
-            </div>
-            <div class="social-note">
-                または @AKIRABLESS までご連絡ください
+        <section class="contact-section fade-in">
+            <div class="container">
+                <h2 class="section-title">RESERVATION</h2>
+                <div class="contact-info">
+                    ご予約・お問い合わせは<br class="sp-only">InstagramのDMへお気軽にどうぞ！
+                </div>
+                <a href="#" class="instagram-btn">
+                    <i class="ph-bold ph-instagram-logo"></i>
+                    <span>@akirabless へ連絡する</span>
+                </a>
             </div>
         </section>
     </main>
@@ -485,5 +494,22 @@
     <footer>
         <p>&copy; 2025 株式会社BLESS. All rights reserved.</p>
     </footer>
+
+    <script>
+        // スクロールアニメーション
+        const targets = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 }); // 画面に20%入ったら発動
+
+        targets.forEach(target => {
+            observer.observe(target);
+        });
+    </script>
 </body>
 </html>
